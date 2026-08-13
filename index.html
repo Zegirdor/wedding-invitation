@@ -382,7 +382,7 @@
             <div class="flex flex-col space-y-8" id="groom-timeline">
               <div class="flex flex-col space-y-2">
                 <h3 class="text-secondary text-2xl font-bold" data-aos="fade-left" data-aos-delay="300">
-                  Ubicación (novio)
+                  Familia Moreno Rodríguez
                 </h3>
 
                 <p class="text-xl" data-aos="fade-left" data-aos-delay="350">
@@ -402,16 +402,16 @@
 
               <div class="flex flex-col space-y-2">
                 <h3 class="text-secondary text-2xl font-bold" data-aos="fade-left" data-aos-delay="500">
-                  Itinerario
+                  Línea de tiempo
                 </h3>
 
                 <p class="text-xl" data-aos="fade-left" data-aos-delay="550">
-                  Fiesta de bodas
+                  Boda en el registro civil
                   <br />
-                  Martes, 31 de diciembre de 2024
+                  Fecha por definir
                   <br />
                   <span class="text-base">
-                    (Datos adicionales)
+                    (Detalles por definir)
                   </span>
                 </p>
 
@@ -427,7 +427,7 @@
 
                     <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
                       <time class="font-bold">16h00</time>
-                      <p>Fiesta de bodas</p>
+                      <p>Registro civil (USE)</p>
                     </div>
                   </div>
                 </div>
@@ -435,10 +435,14 @@
                 <p class="text-xl" data-aos="fade-left" data-aos-delay="600">
                   Ceremonia de boda
                   <br />
-                  Miércoles, 1 de enero de 2025
+                  Sábado, 29 de agosto de 2026
                   <br />
-                  <span class="text-base">
-                    (Datos adicionales)
+                    <p data-aos="fade-left" data-aos-delay="450">
+                      <button class="underline text-base hover:text-secondary transition-colors duration-300 cursor-pointer modal-open"
+                        data-modal="#eventMap">
+                        <i class="fas fa-map-marker-alt"></i> (Salón Metropólitan)
+                      </button>
+                    </p>
                 </p>
 
                 <!-- itinerario -->
@@ -508,7 +512,7 @@
             <div class="hidden flex-col space-y-8" id="bride-timeline">
               <div class="flex flex-col space-y-2">
                 <h3 class="text-secondary text-2xl font-bold" data-aos="fade-left" data-aos-delay="300">
-                  Ubicación (novia)
+                  Familia Peraza Franco
                 </h3>
 
                 <p class="text-xl" data-aos="fade-left" data-aos-delay="350">
@@ -528,16 +532,16 @@
 
               <div class="flex flex-col space-y-2">
                 <h3 class="text-secondary text-2xl font-bold" data-aos="fade-left" data-aos-delay="500">
-                  Itinerario (novia)
+                  Línea de tiempo
                 </h3>
 
                 <p class="text-xl" data-aos="fade-left" data-aos-delay="550">
-                  Fiesta de bodas
+                  Boda en el registro civil
                   <br />
-                  Martes, 31 de diciembre de 2024
+                  Fecha por definir
                   <br />
                   <span class="text-base">
-                    (Datos adicionales)
+                    (Detalles por definir)
                   </span>
                 </p>
 
@@ -553,7 +557,7 @@
 
                     <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
                       <time class="font-bold">16h00</time>
-                      <p>Fiesta de bodas</p>
+                      <p>Registro civil (USE)</p>
                     </div>
                   </div>
                 </div>
@@ -561,10 +565,14 @@
                 <p class="text-xl" data-aos="fade-left" data-aos-delay="600">
                   Ceremonia de boda
                   <br />
-                  Miércoles, 1 de enero de 2025
+                  Sábado, 29 de agosto de 2026
                   <br />
-                  <span class="text-base">
-                    (Datos adicionales)
+                    <p data-aos="fade-left" data-aos-delay="450">
+                      <button class="underline text-base hover:text-secondary transition-colors duration-300 cursor-pointer modal-open"
+                        data-modal="#eventMap">
+                        <i class="fas fa-map-marker-alt"></i> (Salón Metropólitan)
+                      </button>
+                    </p>
                 </p>
 
                 <!-- itinerario -->
@@ -784,6 +792,24 @@
     <div class="mt-4 h-[400px] md:h-[600px] w-[800px] overflow-auto max-w-full max-h-full">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4068.802547372605!2d-107.38673291078607!3d24.79843908582424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ3JzU1LjIiTiAxMDfCsDIzJzEwLjkiVw!5e1!3m2!1sen!2smx!4v1786525715483!5m2!1sen!2smx"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        class="w-full h-full"></iframe>
+    </div>
+  </div>
+  
+  <div
+    class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white z-30 p-4 rounded-md shadow-lg hidden modal min-w-80 max-w-[calc(90vw)] max-h-[calc(90vh)]"
+    id="eventMap">
+    <div class="flex justify-between items-center">
+      <h2 class="text-xl font-bold">Ubicación de la casa del novio</h2>
+      <button class="text-red-500 cursor-pointer modal-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="mt-4 h-[400px] md:h-[600px] w-[800px] overflow-auto max-w-full max-h-full">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4838.77152976267!2d-107.40741722359066!3d24.795302177971788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bcd0beee3643ff%3A0xf86e169e6767365b!2sSal%C3%B3n%20Metropolitan!5e1!3m2!1sen!2smx!4v1786599093831!5m2!1sen!2smx"
         style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         class="w-full h-full"></iframe>
     </div>
