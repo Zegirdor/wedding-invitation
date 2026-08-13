@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luis Ángel & Leslie Janeth - Invitación a nuestra boda</title>
+  <meta name="description" content="Están cordialmente invitados a asistir a nuestra celebración de boda" />
+
+  <!-- favicon -->
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+  <!-- og meta -->
+  <meta property="og:type" value="website" />
+  <meta property="og:title" value="Luis Ángel & Leslie Janeth - Invitación a nuestra boda" />
+  <meta property="og:description" value="Están cordialmente invitados a asistir a nuestra celebración de boda" />
+  <meta property="og:page_url" value="https://wedding.klpod221.site/" />
+  <meta property="og:image" value="https://wedding.klpod221.site/images/bg.jpg" />
+  <meta property="og:image:image_url" value="https://wedding.klpod221.site/" />
+  <meta property="og:image:image_alt" value="https://wedding.klpod221.site/images/bg.jpg" />
+
+  <!-- make this site invisible to search engines -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- style for preloader -->
+  <style>
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      overflow: hidden;
+      background-color: #F7E9E8;
+      transition: all 0.6s ease-out;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #preloader:before,
+    #preloader:after {
+      content: "";
+      position: absolute;
+      border: 4px solid #A0A09C;
+      border-radius: 50%;
+      animation: animate-preloader 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+
+    #preloader:after {
+      animation-delay: -0.5s;
+    }
+
+    @keyframes animate-preloader {
+      0% {
+        width: 10px;
+        height: 10px;
+        top: calc(50% - 5px);
+        left: calc(50% - 5px);
+        opacity: 1;
+      }
+
+      100% {
+        width: 72px;
+        height: 72px;
+        top: calc(50% - 36px);
+        left: calc(50% - 36px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-text font-sans">
+  <div id="preloader"></div>
+
+  <header class="group">
+    <div class="fixed z-50 top-4 right-4 p-4 md:hidden cursor-pointer" id="hamburger">
+      <div class="grid justify-items-center gap-1.5">
+        <div
+          class="w-6 h-[2px] rounded-full bg-text transition group-[&.menu-open]:rotate-45 group-[&.menu-open]:translate-y-1.5">
+        </div>
+        <div class="w-6 h-[2px] rounded-full bg-text transition group-[&.menu-open]:scale-x-0"></div>
+        <div
+          class="w-6 h-[2px] rounded-full bg-text group-[&.menu-open]:-rotate-45 group-[&.menu-open]:-translate-y-2.5">
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="fixed md:opacity-40 md:hover:opacity-100 opacity-100 z-40 md:top-14 left-2 xl:left-16 md:w-fit md:h-fit bg-main md:bg-transparent w-full h-screen flex items-center justify-center transition-all duration-300 transform translate-x-full md:translate-x-0 group-[&.menu-open]:translate-x-0 p-2 rounded-lg md:bg-opacity-60">
+      <ul class="flex flex-col">
+        <li class="w-full relative md:h-12 h-16 border-b border-secondary/30 md:border-none">
+          <a href="#home"
+            class="w-full h-full transition-colors duration-300 flex items-center text-xl justify-center md:text-base md:justify-start group/link text-red-900">
+            <span class="relative">
+              Home
+              <span
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary origin-left transform scale-x-0 transition-transform duration-300 ease-out group-hover/link:scale-x-100 header-line">
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="w-full relative md:h-12 h-16 border-b border-secondary/30 md:border-none">
+          <a href="#story"
+            class="w-full h-full transition-colors duration-300 flex items-center text-xl justify-center md:text-base md:justify-start group/link">
+            <span class="relative">
+              Una ventana a nuestra historia
+              <span
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary origin-left transform scale-x-0 transition-transform duration-300 ease-out group-hover/link:scale-x-100 header-line">
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="w-full relative md:h-12 h-16 border-b border-secondary/30 md:border-none">
+          <a href="#details"
+            class="w-full h-full transition-colors duration-300 flex items-center text-xl justify-center md:text-base md:justify-start group/link">
+            <span class="relative">
+              Día de la boda
+              <span
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary origin-left transform scale-x-0 transition-transform duration-300 ease-out group-hover/link:scale-x-100 header-line">
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="w-full relative md:h-12 h-16 border-b border-secondary/30 md:border-none">
+          <a href="#registry"
+            class="w-full h-full transition-colors duration-300 flex items-center text-xl justify-center md:text-base md:justify-start group/link">
+            <span class="relative">
+              Confirmación de asistencia
+              <span
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary origin-left transform scale-x-0 transition-transform duration-300 ease-out group-hover/link:scale-x-100 header-line">
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="w-full relative md:h-12 h-16 border-b border-secondary/30 md:border-none">
+          <a href="#wedding-gift"
+            class="w-full h-full transition-colors duration-300 flex items-center text-xl justify-center md:text-base md:justify-start group/link">
+            <span class="relative">
+              En el evento...
+              <span
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary origin-left transform scale-x-0 transition-transform duration-300 ease-out group-hover/link:scale-x-100 header-line">
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="w-full overflow-x-hidden">
+
+    <section id="home" class="relative w-screen h-screen">
+      <div class="fixed top-0 left-0 w-screen h-screen -z-10 flex flex-col items-center justify-end">
+        <div class="w-full h-full">
+          <img loading="lazy" src="/images/background_photo.png" alt="fondo_de_invitación" class="w-full h-100 object-cover" />
+        </div>
+      </div>
+
+      <div class="fixed top-0 left-0 w-screen h-screen -z-10">
+        <div class="flex flex-col items-center pt-[90px] w-full h-screen">
+          <h1
+            class="tracking-widest font-dancing mb-2 flex flex-col items-center justify-center gap-4 sm:flex-row w-full max-w-80 sm:max-w-none sm:w-fit text-4xl whitespace-nowrap text-red-700">
+            <span class="w-full text-left">Luis Ángel</span>
+            <span>
+              <i class="fa fa-heart text-secondary text-3xl text-pink-700"></i>
+            </span>
+            <span class="w-full text-right">Leslie Janeth</span>
+          </h1>
+
+          <div
+            class="text-lg hidden sm:block relative before:absolute before:bg-secondary before:w-8 before:h-px before:bottom-3 before:-left-12 after:absolute after:bg-secondary after:w-8 after:h-px after:bottom-3 after:-right-12 text-pink-500">
+            Nuestra boda
+          </div>
+
+          <div class="absolute bottom-8 animate-bounce">
+            <a href="#story">
+              <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="relative">
+      <div class="w-full bg-gray-50">
+        <div class="w-full py-20 md:pt-32 md:pb-40 bg-main">
+          <div class="flex flex-col items-center w-full">
+            <h2
+              class="tracking-widest font-dancing font-bold text-4xl font-brandon flex flex-col items-center justify-center gap-2 xl:flex-row xl:gap-0 mb-16"
+              data-aos="fade-left">
+              <span>¡Dijo que sí!</span>
+            </h2>
+
+            <p class="md:text-lg px-4 max-w-3xl text-center" data-aos="fade-right" data-aos-delay="300">
+              A pesar de las dificultades y de las probabilidades, hemos superado
+              cada reto que se nos ha presentado. Quisiera decirles que fue difícil,
+              pero la verdad es que todo ha salido bien casi sin quererlo, porque
+              cuando hay amor, no hay obstáculo que valga.
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full relative max-w-5xl mx-auto p-2 -mt-12 md:-mt-20">
+          <div class="swiper default-carousel swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="w-full h-fit md:h-[576px] relative rounded-lg overflow-hidden">
+                  <img src="/images/nuestra_historia/historia (1).jpg" alt="image" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w-full h-fit md:h-[576px] relative rounded-lg overflow-hidden">
+                  <img src="/images/nuestra_historia/historia (2).jpg" alt="image" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w-full h-fit md:h-[676px] relative rounded-lg overflow-hidden">
+                  <img src="/images/nuestra_historia/historia (3).jpg" alt="image" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w-full h-fit md:h-[676px] relative rounded-lg overflow-hidden">
+                  <img src="/images/nuestra_historia/historia (4).jpg" alt="image" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w-full h-fit md:h-[676px] relative rounded-lg overflow-hidden">
+                  <img src="/images/nuestra_historia/historia (5).jpg" alt="image" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="w-full h-fit md:h-[576px] relative rounded-lg overflow-hidden">
+                  <img src="/images/nuestra_historia/historia (6).jpg" alt="image" class="w-full h-full object-cover" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next absolute top-1/2 right-4 transform -translate-y-1/2 z-10 cursor-pointer">
+              <i class="fas fa-chevron-right text-3xl text-white"></i>
+            </div>
+            <div class="swiper-button-prev absolute top-1/2 left-4 transform -translate-y-1/2 z-10 cursor-pointer">
+              <i class="fas fa-chevron-left text-3xl text-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="details" class="relative">
+      <div class="w-full bg-gray-50 py-10 md:py-28 px-1">
+        <div class="flex flex-wrap max-w-4xl mx-auto">
+          <div class="w-full md:w-1/2 p-4 relative">
+            <div class="absolute top-0 left-10 z-0" data-aos="fade-right" data-aos-delay="100">
+              <img loading="lazy" src="/images/branch.png" alt="branch" class="scale-90" />
+            </div>
+
+            <div class="tracking-[1em] text-2xl md:text-3xl font-brandon uppercase z-10 relative mt-10"
+              data-aos="fade-right">
+              <p>La</p>
+              <p>Gran</p>
+              <p>Fecha</p>
+            </div>
+
+            <div class="flex flex-col space-y-4 mt-5 rounded-lg z-10 relative">
+              <table class="w-full text-center">
+                <caption class="uppercase text-secondary text-xl font-bold mb-1" data-aos="fade-right"
+                  data-aos-delay="200">
+                  08 (Ago), 2026
+                </caption>
+
+                <thead data-aos="fade-right" data-aos-delay="250">
+                  <tr class="border-y border-secondary">
+                    <th class="pt-1" abbr="Sunday" scope="col" title="Sunday">Dom</th>
+                    <th class="pt-1" abbr="Monday" scope="col" title="Monday">Lun</th>
+                    <th class="pt-1" abbr="Tuesday" scope="col" title="Tuesday">Mar</th>
+                    <th class="pt-1" abbr="Wednesday" scope="col" title="Wednesday">Mié</th>
+                    <th class="pt-1" abbr="Thursday" scope="col" title="Thursday">Jue</th>
+                    <th class="pt-1" abbr="Friday" scope="col" title="Friday">Vie</th>
+                    <th class="pt-1" abbr="Saturday" scope="col" title="Saturday">Sab</th>
+                  </tr>
+                </thead>
+
+                <tbody data-aos="fade-right" data-aos-delay="300">
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>
+                      <div class="flex items-center justify-center">
+                        <span>
+                          &nbsp;
+                        </span>
+                      </div>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>
+                      <div class="flex items-center justify-center">
+                        <span
+                          class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center font-bold text-white">
+                          29
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="flex justify-center border-t border-secondary pt-4" data-aos="fade-right"
+              data-aos-delay="350">
+              <span id="wedding_state" class="text-secondary text-xl font-bold mb-1 uppercase">
+                Faltan...
+              </span>
+              </div>
+              <div class="flex justify-between border-t border-secondary pt-4" data-aos="fade-right"
+              data-aos-delay="350">
+                <div class="flex flex-col items-center">
+                  <span class="text-4xl" id="days">00</span>
+                  <span class="text-lg">Días</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <span class="text-4xl" id="hours">00</span>
+                  <span class="text-lg">Horas</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <span class="text-4xl" id="minutes">00</span>
+                  <span class="text-lg">Minutos</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <span class="text-4xl" id="seconds">00</span>
+                  <span class="text-lg">Segundos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2 p-4">
+            <!-- Itinerario del novio -->
+            <div class="flex flex-col space-y-8" id="groom-timeline">
+              <div class="flex flex-col space-y-2">
+                <h3 class="text-secondary text-2xl font-bold" data-aos="fade-left" data-aos-delay="300">
+                  Ubicación (novio)
+                </h3>
+
+                <p class="text-xl" data-aos="fade-left" data-aos-delay="350">
+                  Padres del novio Luis Ángel
+                </p>
+                <p data-aos="fade-left" data-aos-delay="400">
+                  Luis Alfonso Moreno, Elisabet Rodríguez
+                </p>
+                <p data-aos="fade-left" data-aos-delay="450">
+                  <button
+                    class="underline text-base hover:text-secondary transition-colors duration-300 cursor-pointer modal-open"
+                    data-modal="#groomMap">
+                    <i class="fas fa-map-marker-alt"></i> Ver en el mapa
+                  </button>
+                </p>
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <h3 class="text-secondary text-2xl font-bold" data-aos="fade-left" data-aos-delay="500">
+                  Itinerario
+                </h3>
+
+                <p class="text-xl" data-aos="fade-left" data-aos-delay="550">
+                  Fiesta de bodas
+                  <br />
+                  Martes, 31 de diciembre de 2024
+                  <br />
+                  <span class="text-base">
+                    (Datos adicionales)
+                  </span>
+                </p>
+
+                <div class="pb-5 space-y-4 relative">
+
+                  <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                    data-aos="fade-left" data-aos-delay="650">
+                    <div
+                      class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                      <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
+                      <time class="font-bold">16h00</time>
+                      <p>Fiesta de bodas</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="text-xl" data-aos="fade-left" data-aos-delay="600">
+                  Ceremonia de boda
+                  <br />
+                  Miércoles, 1 de enero de 2025
+                  <br />
+                  <span class="text-base">
+                    (Datos adicionales)
+                </p>
+
+                <!-- itinerario -->
+                <div
+                  class="space-y-4 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+
+                  <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                    data-aos="fade-left" data-aos-delay="650">
+                    <div
+                      class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                      <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
+                      <time class="font-bold">07h00 - 08h00</time>
+                      <p>Ceremonia de compromiso en casa de la novia.</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                    data-aos="fade-right" data-aos-delay="700">
+                    <div
+                      class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                      <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] md:text-end">
+                      <time class="font-bold">08h00 - 09h00</time>
+                      <p>Procesión nupcial en la casa de la novia.</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                    data-aos="fade-left" data-aos-delay="750">
+                    <div
+                      class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                      <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
+                      <time class="font-bold">12h00 - 13h30</time>
+                      <p>Ceremonia nupcial en casa del novio.</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                    data-aos="fade-right" data-aos-delay="800">
+                    <div
+                      class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                      <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] md:text-end">
+                      <time class="font-bold">13h30</time>
+                      <p>Recepción de la boda en casa del novio.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Itinerario de la novia -->
+            <div class="hidden flex-col space-y-8" id="bride-timeline">
+              <div class="flex flex-col space-y-2">
+                <h3 class="text-secondary text-2xl font-bold" data-aos="fade-left" data-aos-delay="300">
+                  Ubicación (novia)
+                </h3>
+
+                <p class="text-xl" data-aos="fade-left" data-aos-delay="350">
+                  Padres de la novia Leslie Janeth
+                </p>
+                <p data-aos="fade-left" data-aos-delay="400">
+                  Jimmy Peraza, Olimpia Franco
+                </p>
+                <p data-aos="fade-left" data-aos-delay="450">
+                  <button
+                    class="underline text-base hover:text-secondary transition-colors duration-300 cursor-pointer modal-open"
+                    data-modal="#brideMap">
+                    <i class="fas fa-map-marker-alt"></i> Ver en el mapa
+                  </button>
+                </p>
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <h3 class="text-secondary text-2xl font-bold" data-aos="fade-left" data-aos-delay="500">
+                  Itinerario (novia)
+                </h3>
+
+                <p class="text-xl" data-aos="fade-left" data-aos-delay="550">
+                  Fiesta de bodas
+                  <br />
+                  Martes, 31 de diciembre de 2024
+                  <br />
+                  <span class="text-base">
+                    (Datos adicionales)
+                  </span>
+                </p>
+
+                <div class="pb-5 space-y-4 relative">
+
+                  <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                    data-aos="fade-left" data-aos-delay="650">
+                    <div
+                      class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                      <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
+                      <time class="font-bold">16h00</time>
+                      <p>Fiesta de bodas</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="text-xl" data-aos="fade-left" data-aos-delay="600">
+                  Ceremonia de boda
+                  <br />
+                  Miércoles, 1 de enero de 2025
+                  <br />
+                  <span class="text-base">
+                    (Datos adicionales)
+                </p>
+
+                <!-- itinerario -->
+                <div
+                  class="space-y-4 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+
+                  <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                    data-aos="fade-left" data-aos-delay="650">
+                    <div
+                      class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                      <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
+                      <time class="font-bold">07h00 - 08h00</time>
+                      <p>Ceremonia de compromiso en casa de la novia.</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                    data-aos="fade-right" data-aos-delay="700">
+                    <div
+                      class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                      <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] md:text-end">
+                      <time class="font-bold">08h00 - 09h00</time>
+                      <p>Procesión nupcial en la casa de la novia.</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                    data-aos="fade-left" data-aos-delay="750">
+                    <div
+                      class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                      <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
+                      <time class="font-bold">12h00 - 13h30</time>
+                      <p>Ceremonia nupcial en casa del novio.</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                    data-aos="fade-right" data-aos-delay="800">
+                    <div
+                      class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 text-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                      <i class="fas fa-heart"></i>
+                    </div>
+
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] md:text-end">
+                      <time class="font-bold">13h30</time>
+                      <p>Recepción de la boda en casa del novio.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="registry" class="w-full py-28 px-4 sm:py-40 bg-[url('/images/bg.png')]">
+      <div class="w-full h-full flex items-center justify-center">
+        <div class="relative bg-white p-6 sm:p-10" data-aos="fade-right">
+          <div class="absolute -left-16 -top-24">
+            <img loading="lazy" src="/images/invitation-left-img.png" alt="invitation" class="w-[150px]" />
+          </div>
+
+          <div class="absolute -right-20 -bottom-16">
+            <img loading="lazy" src="/images/invitation-right-img.png" alt="invitation" class="w-[300px]" />
+          </div>
+
+          <div class="border border-secondary px-4 py-10 text-center relative z-10">
+            <h3 class="font-dancing text-4xl mb-4" data-aos="fade-right" data-aos-delay="100">
+              Prepárate para el día
+            </h3>
+            <p class="text-secondary" data-aos="fade-right" data-aos-delay="150">
+              De la boda de
+            </p>
+            <h3 class="text-2xl xs:text-3xl font-brandon font-bold mb-2" data-aos="fade-right" data-aos-delay="200">
+              Luis Ángel & Leslie Janeth
+            </h3>
+            <p class="mb-6 text-lg" data-aos="fade-right" data-aos-delay="250">
+              Tu presencia es un honor y un placer para nosotros.
+            </p>
+            <button
+              class="bg-secondary text-white px-8 py-2 rounded-full hover:bg-slate-300 transition-colors duration-300 modal-open"
+              data-modal="#registryModal" data-aos="fade-right" data-aos-delay="300">
+              Confirmar asistencia
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="wedding-gift" class="relative">
+      <div class="w-full bg-main py-20 md:py-40">
+        <div class="flex flex-col items-center w-full">
+          <h2
+            class="tracking-widest font-dancing font-bold text-4xl flex flex-col items-center justify-center gap-2 xl:flex-row mb-12">
+            <span class="text-center">Regalo de bodas</span>
+          </h2>
+
+          <div class="max-w-4xl flex flex-col md:flex-row gap-10 p-4">
+            <div class="flex flex-col w-full md:w-2/5">
+              <h2 class="text-2xl font-bold mb-4" data-aos="fade-right" data-aos-delay="100">
+                Muchas gracias
+              </h2>
+
+              <p class="text-lg text-justify" data-aos="fade-right" data-aos-delay="200">
+                Les agradecemos sinceramente que dediquen su tiempo a celebrar este día tan especial con nosotros.
+                <br />
+                Su presencia y sus buenos deseos son el mejor regalo que podríamos recibir.
+              </p>
+
+              <p class="text-lg mt-4 font-semibold" data-aos="fade-right" data-aos-delay="300">
+                Les agradecemos infinitamente,
+                <br />
+                Luis Ángel & Leslie Janeth
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="flex flex-col items-center p-2 bg-white rounded-lg" data-aos="fade-left" data-aos-delay="400">
+                <img loading="lazy" src="/images/vietcombank.jpg" alt="qr-code" class="w-60 h-60" />
+                <p class=" mt-4">Ngân hàng Vietcombank</p>
+                <p>STK: 0541000346532</p>
+                <p>Chủ TK: BUI THANH XUAN</p>
+              </div>
+
+              <div class="flex flex-col items-center p-2 bg-white rounded-lg" data-aos="fade-left" data-aos-delay="400">
+                <img loading="lazy" src="/images/mbbank.jpg" alt="qr-code" class="w-60 h-60" />
+                <p class="mt-4">Ngân hàng MBBank</p>
+                <p>STK: 240424048888</p>
+                <p>Chủ TK: TRAN THU UYEN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full bg-white text-center py-4">
+    <p>
+      &copy; 2026 Luis Ángel & Leslie Janeth Invitación a nuestra boda
+    </p>
+    <p>
+      Hecho con <i class="fas fa-heart text-red-500"></i>
+    </p>
+  </footer>
+
+  <!-- modal bg -->
+  <div class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 z-20 hidden modal-close" id="modal-bg"></div>
+
+  <!-- modal -->
+  <div
+    class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white z-30 rounded-lg shadow-lg hidden modal min-w-80 max-w-[calc(90vw)] max-h-[calc(90vh)]"
+    id="brideOrGroom">
+    <div class="flex justify-between items-center space-x-4 border-b border-gray-200 px-4 pt-4 pb-2">
+      <h2 class="text-xl font-bold">
+        ¿Eres invitado de la familia del novio o de la familia de la novia?
+      </h2>
+    </div>
+
+    <div class="h-full overflow-auto">
+      <div class="flex justify-center space-x-8">
+        <button class="bg-main m-5 rounded-full p-4 transition transform hover:scale-125 hover:bg-slate-300 guest-type"
+          data-type="groom">
+          <img loading="lazy" src="/images/groom.svg" alt="groom" class="w-14 h-14" />
+        </button>
+
+        <button class="bg-main m-5 rounded-full p-4 transition transform hover:scale-125 hover:bg-slate-300 guest-type"
+          data-type="bride">
+          <img loading="lazy" src="/images/bride.png" alt="bride" class="w-14 h-14" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white z-30 p-4 rounded-md shadow-lg hidden modal min-w-80 max-w-[calc(90vw)] max-h-[calc(90vh)]"
+    id="brideMap">
+    <div class="flex justify-between items-center">
+      <h2 class="text-xl font-bold">Ubicación de la casa de la novia</h2>
+      <button class="text-red-500 cursor-pointer modal-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="mt-4 h-[400px] md:h-[600px] w-[800px] overflow-auto max-w-full max-h-full">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5755.297030848368!2d-107.35500213538263!3d24.773829137594902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bcd71bbcb901f1%3A0x3cb2b3411c81f48d!2sHelenios%202777%2C%20Laureles%20Pinos%2C%2080246%20Culiac%C3%A1n%20Rosales%2C%20Sin.!5e1!3m2!1sen!2smx!4v1786525804846!5m2!1sen!2smx"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        class="w-full h-full"></iframe>
+    </div>
+  </div>
+
+  <div
+    class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white z-30 p-4 rounded-md shadow-lg hidden modal min-w-80 max-w-[calc(90vw)] max-h-[calc(90vh)]"
+    id="groomMap">
+    <div class="flex justify-between items-center">
+      <h2 class="text-xl font-bold">Ubicación de la casa del novio</h2>
+      <button class="text-red-500 cursor-pointer modal-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="mt-4 h-[400px] md:h-[600px] w-[800px] overflow-auto max-w-full max-h-full">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4068.802547372605!2d-107.38673291078607!3d24.79843908582424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQ3JzU1LjIiTiAxMDfCsDIzJzEwLjkiVw!5e1!3m2!1sen!2smx!4v1786525715483!5m2!1sen!2smx"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        class="w-full h-full"></iframe>
+    </div>
+  </div>
+
+  <div
+    class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white z-30 p-4 rounded-md shadow-lg hidden modal w-[800px] max-w-[90vw] h-[80vh]"
+    id="registryModal">
+    <div class="flex justify-between items-center">
+      <h2 class="text-xl font-bold">Confirmar asistencia</h2>
+      <button class="text-red-500 cursor-pointer modal-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="mt-4">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScHABjiDeGoZ4J_H7PxZbx9Wx44Kr85LrzGuGbTShC_xii0dQ/viewform?embedded=true"
+        frameborder="0" marginheight="0" marginwidth="0" class="w-full h-[calc(80vh-4rem)]" id="groomForm">Loading…</iframe>
+
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSc0uVgy1KLo6y6Tnh9DpynaHn9gj3vHXcL4m8sJ4mPtip8L3A/viewform?embedded=true"
+        frameborder="0" marginheight="0" marginwidth="0" class="w-full h-[calc(80vh-4rem)] hidden" id="brideForm">Loading…</iframe>
+    </div>
+  </div>
+
+  <!-- icon bride or groom -->
+  <div class="fixed bottom-4 right-4 z-50" id="brideOrGroomIcon">
+    <button
+      class="bg-main rounded-full p-2 transition transform hover:scale-125 hover:bg-slate-300 shadow-lg focus:outline-none"
+      title="¿Eres invitado de la familia del novio o de la familia de la novia?" id="changeGuestType">
+      <img loading="lazy" src="/images/groom.svg" alt="bride" class="w-6 h-6" id="groomBtn" />
+      <img loading="lazy" src="/images/bride.png" alt="bride" class="w-6 h-6 hidden" id="brideBtn" />
+    </button>
+  </div>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
