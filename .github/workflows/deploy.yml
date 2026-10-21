@@ -18,6 +18,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -49,6 +50,7 @@ jobs:
           path: ./dist
 
   Deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -61,6 +63,7 @@ jobs:
 
   server-build:
     name: Build on homeserver
+    if: github.ref == 'refs/heads/main'
     runs-on: self-hosted
     steps:
       - name: Checkout
@@ -86,6 +89,7 @@ jobs:
 
   deploy-homeserver:
     name: Deploy to homeserver
+    if: github.ref == 'refs/heads/main'
     runs-on: self-hosted
     needs: server-build
     steps:
