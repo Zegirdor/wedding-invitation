@@ -163,6 +163,16 @@ $(() => {
     const now = new Date().getTime();
     const distance = weddingDate - now;
     
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    
+    if (days === 0 && distance > 0) {
+      stateEl.text("¡Es hoy!")
+    }
+
+    if (days <= 0 && distance <= 0) {
+      stateEl.text("¡Gracias por habernos acompañado!")
+    }
+    
     if (distance <= 0) {
       clearInterval(countdownInterval);
       daysEl.text("00");
@@ -170,14 +180,6 @@ $(() => {
       minutesEl.text("00");
       secondsEl.text("00");
       return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    if (days == 0) {
-      stateEl.text("¡Es hoy!")
-    }
-    if (days <= 0) {
-      stateEl.text("¡Gracias por habernos acompañado!")
     }
     const hours = Math.floor(
       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)

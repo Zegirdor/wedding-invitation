@@ -1,70 +1,22 @@
-name: Deploy to GitHub Pages and Homeserver
-
+name: Build on GitHub Pages or Self-hosted runner, then deploy on both
 on:
   push:
     branches:
       - main
-
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
 concurrency:
-  group: "pages"
+  group: wedding-deploy
   cancel-in-progress: false
 
 jobs:
-  build:
-    if: github.ref == 'refs/heads/main'
+  build-on-github:
+    name: Build on GitHub
     runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Setup Node
-        uses: actions/setup-node@v7
-        with:
-          node-version: 20
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Cache node_modules
-        uses: actions/cache@v6
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
-      - name: Build
-        run: npm run build
-
-      - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: ./dist
-
-  Deploy:
     if: github.ref == 'refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
 
-  server-build:
-    name: Build on homeserver
-    if: github.ref == 'refs/heads/main'
-    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -73,30 +25,91 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 24
-
-      - name: Install Dependencies
+      
+      - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Build project
+        run: npm run build -- --base=./
 
-      - name: Upload site for deployment
+      - name: Upload Artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v5
+        with:
+          name: wedding-artifact-pages
+          path: ./dist
+          
+      - name: Upload artifact for homeserver deployment
         uses: actions/upload-artifact@v7
         with:
-          name: homeserver-site
+          name: wedding-artifact-homeserver
+          path: dist/
+          if-no-files-found: error
+  
+  build-on-homeserver:
+    name: Build on Homeserver
+    runs-on: self-hosted
+    needs: build-on-github
+    if: failure() && needs.build-on-github.result == 'failure' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build -- --base=./
+
+      - name: Upload Artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v5
+        with:
+          name: wedding-artifact-pages-fallback
+          path: ./dist
+          
+      - name: Upload artifact for homeserver deployment
+        uses: actions/upload-artifact@v7
+        with:
+          name: wedding-artifact-homeserver-fallback
           path: dist/
           if-no-files-found: error
 
+  deploy-on-github-pages:
+    name: Deploy to GitHub Pages
+    needs: [build-on-github, build-on-homeserver]
+    if: >-
+      always() && (needs.build-on-github.result == 'success' || needs.build-on-homeserver.result == 'success') && github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: GitHub Pages deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
+        with:
+          artifact_name: ${{ needs.build-on-github.result == 'success' && 'wedding-artifact-pages' || 'wedding-artifact-pages-fallback' }}
+
   deploy-homeserver:
     name: Deploy to homeserver
-    if: github.ref == 'refs/heads/main'
+    needs: [build-on-github, build-on-homeserver]
+    if: >-
+      always() && (needs.build-on-github.result == 'success' || needs.build-on-homeserver.result == 'success') && github.ref == 'refs/heads/main'
     runs-on: self-hosted
-    needs: server-build
     steps:
-      - name: Download built site
+      - name: Download regular artifacts
         uses: actions/download-artifact@v8
         with:
-          name: homeserver-site
+          name: ${{ needs.build-on-github.result == 'success' && 'wedding-artifact-homeserver' || 'wedding-artifact-homeserver-fallback' }}
           path: dist/
 
       - name: Publish site to Nginx directory
