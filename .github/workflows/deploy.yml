@@ -1,4 +1,4 @@
-name: Build on GitHub Pages or Self-hosted runner, then deploy on both
+name: Wedding Invitation's Build on GitHub Pages or Self-hosted runner, then deploy on both
 on:
   push:
     branches:
@@ -35,13 +35,13 @@ jobs:
       - name: Upload Artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v5
         with:
-          name: wedding-artifact-pages
+          name: wedding-invitation-pages-artifact
           path: ./dist
           
       - name: Upload artifact for homeserver deployment
         uses: actions/upload-artifact@v7
         with:
-          name: wedding-artifact-homeserver
+          name: wedding-invitation-homeserver-artifact
           path: dist/
           if-no-files-found: error
   
@@ -68,13 +68,13 @@ jobs:
       - name: Upload Artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v5
         with:
-          name: wedding-artifact-pages-fallback
+          name: wedding-invitation-pages-artifact-fallback
           path: ./dist
           
       - name: Upload artifact for homeserver deployment
         uses: actions/upload-artifact@v7
         with:
-          name: wedding-artifact-homeserver-fallback
+          name: wedding-invitation-homeserver-artifact-fallback
           path: dist/
           if-no-files-found: error
 
@@ -96,7 +96,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
         with:
-          artifact_name: ${{ needs.build-on-github.result == 'success' && 'wedding-artifact-pages' || 'wedding-artifact-pages-fallback' }}
+          artifact_name: ${{ needs.build-on-github.result == 'success' && 'wedding-invitation-pages-artifact' || 'wedding-invitation-pages-artifact-fallback' }}
 
   deploy-homeserver:
     name: Deploy to homeserver
@@ -108,7 +108,7 @@ jobs:
       - name: Download regular artifacts
         uses: actions/download-artifact@v8
         with:
-          name: ${{ needs.build-on-github.result == 'success' && 'wedding-artifact-homeserver' || 'wedding-artifact-homeserver-fallback' }}
+          name: ${{ needs.build-on-github.result == 'success' && 'wedding-invitation-homeserver-artifact' || 'wedding-invitation-homeserver-artifact-fallback' }}
           path: dist/
 
       - name: Publish site to Nginx directory
