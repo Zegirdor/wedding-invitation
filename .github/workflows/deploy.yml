@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+
 concurrency:
   group: wedding-deploy
   cancel-in-progress: false
@@ -16,7 +17,6 @@ jobs:
     name: Build on GitHub
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -50,7 +50,6 @@ jobs:
     runs-on: self-hosted
     needs: build-on-github
     if: failure() && needs.build-on-github.result == 'failure' && github.ref == 'refs/heads/main'
-
     steps:
       - name: Checkout
         uses: actions/checkout@v7
