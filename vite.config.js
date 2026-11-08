@@ -6,4 +6,7 @@ export default defineConfig({
   build: {
     outDir: "dist",
   },
+  server: {
+    allowedHosts: ["localhost", "zegirdordev.com", ".zegirdordev.com", ".onrender.com"]
+  }
 });
