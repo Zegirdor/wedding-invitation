@@ -1,12 +1,14 @@
 {
   "name": "wedding-invitation",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predev": "node check-node.cjs",
+    "prebuild": "node check-node.cjs"
   },
   "devDependencies": {
     "vite": "^8.3.5"
